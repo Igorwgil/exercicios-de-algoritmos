@@ -1,16 +1,16 @@
-// 12) Crie um programa que leia o preço de um produto, calcule e mostre o seu
-// PREÇO PROMOCIONAL, com 5% de desconto
+// 13) Faça um algoritmo que leia o salário de um funcionário, calcule e mostre o
+// seu novo salário, com 15% de aumento.
 
-algoritmo "Promoção"
+algoritmo "Aumento de salário"
 var
-   v: real
-   p: real
-   p_dec: real
+   s: real
+   a_p: real
+   s_f: real
 inicio
-      escreva("Digite o preço do produto: ")
-      leia(v)
-      escreva("Digite a porcentagem do desconto: ")
-      leia(p)
-      p_dec <- p / 100
-      escreva("produto com", p, "% de desconto: ", v - (p_dec * v))
+      escreva("Digite o seu salário: ")
+      leia(s)
+      escreva("Digite a porcentagem de aumento: ")
+      leia(a_p)
+      s_f <- ((a_p / 100) * s ) + s
+      escreva("O seu salário com", a_p, "% de aumento é de R$", s_f)
 fimalgoritmo

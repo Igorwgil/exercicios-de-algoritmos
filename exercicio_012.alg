@@ -1,37 +1,16 @@
-// 11) Desenvolva um lógica que leia os valores de A,B, e C de uma euqação do
-// 2o grau e mostre o valor de Delta.
+// 12) Crie um programa que leia o preço de um produto, calcule e mostre o seu
+// PREÇO PROMOCIONAL, com 5% de desconto
 
-algoritmo "Equação 2o grau"
+algoritmo "Promoção"
 var
-   a: real
-   b: real
-   c: real
-   d: real
-   r_d: real
-   x1: real
-   x2: real
+   v: real
+   p: real
+   p_dec: real
 inicio
-      escreva("Digite o valor de a: ")
-      leia(a)
-      escreva("Digite o valor de b: ")
-      leia(b)
-      escreva("Digite o valor de c: ")
-      leia(c)
-      escreval()
-      
-      
-      d <- b ^ 2 - 4 * a * c
-      escreval("Valor de Delta:" , d)
-      
-      r_d  <- d ^ (1/2)
-
-      escreval("Raíz de Delta: ", r_d)
-      
-      x1 <- (-b + r_d) / (2 * a)
-      x2 <- (-b - r_d) / (2 * a)
-
-      escreval("x1: ", x1)
-      escreva("x2: ", x2)
-      
-      escreval()
+      escreva("Digite o preço do produto: ")
+      leia(v)
+      escreva("Digite a porcentagem do desconto: ")
+      leia(p)
+      p_dec <- p / 100
+      escreva("produto com", p, "% de desconto: ", v - (p_dec * v))
 fimalgoritmo

@@ -1,25 +1,16 @@
-// 14) A locadora de carros precisa da sua ajuda para cobrar seus serviços.
-// Escreva um programa que pergunte a quantidade de Km percorridos por um carro
-// alugado e a quantidade de dias pelos quais ele foi alugado.
-// Calcule o preço
-// total a pagar, sabendo que o carro custa R$90 por dia e R$0,20 por Km rodado.
+ // 15) Crie um programa que leia o número de dias trabalhados em um mês
+// e mostre o salário de um funcionário, sabendo que ele trabalha 8 horas
+// por dia e ganha R$25 por hora trabalhada.
 
-
-algoritmo "calculadora de aluguel"
+algoritmo "Salário avulsos"
 var
-     km: real
-     dias: inteiro
-     valor_dia: real
-     valor_km: real
-     total: real
+   dias: inteiro
+   diaria: real
+   salario: real
 inicio
-      escreva("Quantos quilômetros foram percorridos? ")
-      leia(km)
-      escreva("Por qunatos dias o carro foi alugado? ")
+      escreva("Quantos dias foram trabalhados: ")
       leia(dias)
-      valor_dia <- dias * 90
-      valor_km <- km * 0.20
-      total <- valor_dia + valor_km
-      escreva("O total é de R$", total,".")
-      
+      diaria <- 8 * 25   // tá ganhando bem, hein
+      salario <- dias * diaria
+      escreva("O salário é de R$", salario)
 fimalgoritmo
