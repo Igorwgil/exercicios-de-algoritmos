@@ -1,35 +1,53 @@
 algoritmo "pedra, papel, tesoura"
 
 var
+
    player_01: caracter
    player_02: caracter
-   escolha_01: caracter
-   escolha_02: caracter
+   digito_01: inteiro
+   digito_02: inteiro
+   escolh_01: caracter
+   escolh_02: caracter
+   vencedor: caracter
+   
 inicio
       escreval()
-      
+
       escreva("Digite o nome do player 1 ")
       leia(player_01)
       escreva("Digite o nome do player 2 ")
       leia(player_02)
 
       escreval()
-      
-      escreval(player_01, ", digite 0 para escolher 'pedra', 1 para 'papel', 2 ou para 'tesoura'")
-      leia(escolha_01)
-      
-      escreval(player_02, ", digite 0 para escolher 'pedra', 1 para 'papel', 2 ou para 'tesoura'")
-      leia(escolha_01)
-      
-      escolha escolha_01
-              caso 0
-                   escolha_01 <- "pedra"
 
+      escreval(player_01, ", digite 1 para escolher 'pedra', 2 para 'papel', 3 ou para 'tesoura'")
+      leia(digito_01)
       
+      escolha digito_01
+             Caso 1
+                  escolh_01 <- "pedra"
+             Caso 2
+                  escolh_01 <- "papel"
+             Caso 3
+                  escolh_01 <- "tesoura"
+      fimescolha
+
+      escreval(player_02, ", digite 1 para escolher 'pedra', 2 para 'papel', 3 ou para 'tesoura'")
+      leia(digito_02)
+      
+      escolha digito_02
+             Caso 1
+                  escolh_02 <- "pedra"
+             Caso 2
+                  escolh_02 <- "papel"
+             Caso 3
+                  escolh_02 <- "tesoura"
+      fimescolha
+
       escreval()
       
+      escreval(player_01, " lançou ", escolh_01)
+      escreval(player_02, " lançou ", escolh_02)
       
-      
-      
-      
+
 fimalgoritmo
