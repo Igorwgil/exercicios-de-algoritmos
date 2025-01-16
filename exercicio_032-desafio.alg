@@ -13,15 +13,13 @@ inicio
 
       escreval()
 
-      comp <- randi(4)
-      
-      escreval(comp)
+      comp <- randi(4) + 1
       
       se (comp = user) entao
          escreval("Você acertou!")
       senao
-           escreval("Você errou! Eu estava pensando em", comp,)
+           escreval("Você errou! Eu estava pensando em", comp)
       fimse
-      
+
 
 fimalgoritmo
