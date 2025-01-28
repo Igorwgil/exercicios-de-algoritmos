@@ -1,4 +1,4 @@
-algoritmo "Aluguel de ve?culos"
+algoritmo "Aluguel de veiculos"
 var
    aluguel_popular, km_percorridos, aluguel_luxo, preco_final : real
 
@@ -15,9 +15,12 @@ var
 inicio
        aluguel_popular <- 90
        aluguel_luxo <- 150
-       
+
        preco_abaixo_100_km_popular <- 0.20
        preco_apartir_100_km_popular <- 0.10
+       
+       preco_abaixo_200_km_luxo <- 0.30
+       preco_apartir_200_km_luxo <- 0.25
 
        escreval()
 
@@ -36,7 +39,7 @@ inicio
                 escreval()
        fimenquanto
 
-       escreva("Quantos KM voc? percorreu? ")
+       escreva("Quantos KM voce percorreu? ")
        leia(km_percorridos)
 
        escreval()
@@ -45,23 +48,38 @@ inicio
        leia(dias_alugados)
 
 
-       //-------popular-----------------
+       //popular
        se (classe = 1) entao
           classe_em_texto <- "Popular"
           se (km_percorridos > 100) ou (km_percorridos = 100) entao
              preco_final <- (dias_alugados * aluguel_popular) + (km_percorridos * preco_apartir_100_km_popular)
           senao
-
+               preco_final <- (dias_alugados * aluguel_popular) + (km_percorridos * preco_abaixo_100_km_popular)
           fimse
        senao
+       //luxo
+
+       classe_em_texto <- "Luxo"
+          se (km_percorridos > 200) ou (km_percorridos = 200) entao
+             preco_final <- (dias_alugados * aluguel_luxo) + (km_percorridos * preco_apartir_200_km_luxo)
+          senao
+               preco_final <- (dias_alugados * aluguel_luxo) + (km_percorridos * preco_abaixo_200_km_luxo)
+          fimse
+
+
+
        fimse
 
        escreval()
        escreval("___________________________EXTRATO____________________________")
        escreval()
+       escreval("Diária classe popular: R$", aluguel_popular)
+       escreval("Diária classe luxo: R$", aluguel_luxo)
+       escreval()
+       escreval()
        escreval("CLASSE: ", classe_em_texto)
        escreval("Dias alugados:",dias_alugados, " dias")
-       escreval("Dist?ncia percorrida:", km_percorridos," km")
+       escreval("Distancia percorrida:", km_percorridos," km")
        escreval()
        escreval("Valor final: R$", preco_final)
        escreval()
