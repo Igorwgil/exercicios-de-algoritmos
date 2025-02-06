@@ -1,15 +1,26 @@
-algoritmo "Subtracao"
+algoritmo "Soma regressiva"
+
+//Desenvolva um aplicativo que mostre na tela o resultado da expressão 500 +
+// 450 + 400 + 350 + 300 + ... + 50 + 0
+
 var
-   contador, subtracao, decremento: inteiro
+   contador, valor_final, decremento, soma: inteiro
 inicio
-         escreva("De onde iniciar a subtracao? ")
-         leia(contador)
-         
-         decremento <- 50
-         
-         enquanto (contador > 0) faca
-                  escreval(contador)
-                  contador <- contador - decremento
-         fimenquanto
+
+      contador <- 500
+      valor_final <- -50
+      decremento <- 50
+      soma <- 0
+      
+      enquanto (contador > valor_final) faca
+      
+               soma <- contador + soma
+      
+               escreval(contador)
+               
+               contador <- contador - decremento
+      fimenquanto
+      
+      escreval("Soma: ", soma)
       
 fimalgoritmo
