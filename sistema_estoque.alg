@@ -26,21 +26,51 @@ fimprocedimento
 procedimento reposicaoEstoque()
 var reposicao: inteiro
 inicio
-    escreval()
-    escreva("Digite a quantidade de reposição: ")
-    leia(reposicao)
-    
-    enquanto (reposicao < 1) faca
-        escreval()
-        escreval("Quantidade inválida. Precisa ser maior que 0.")
-        escreva("Digite a quantidade de reposição: ")
-        leia(reposicao)
-    fimenquanto
-    
-    totalEstoque <- totalEstoque + reposicao
-    
-    escreval()
-    escreval("Estoque atualizado:", totalEstoque, " unidades.")
+
+       se (totalEstoque >= 200) entao
+           escreval()
+           escreval("Limite de estoque atingido. Não é possível adicionar itens.")
+       senao
+           escreval()
+           escreval("Espaço disponível: ", 200 - totalEstoque)
+           escreva("Digite a quantidade para reposição: ")
+           leia(reposicao)
+           
+           enquanto (reposicao < 1) faca
+               escreval()
+               escreval("Quantidade tem ser maior que 0.")
+               escreva("Digite a quantidade para reposição: ")
+               leia(reposicao)
+           fimenquanto
+           
+           enquanto (totalEstoque + reposicao > 200) faca
+
+               repita
+
+           
+
+               escreval("Espaço disponível: ", 200 - totalEstoque)
+               escreva("Digite a quantidade para reposição: ")
+               leia(reposicao)
+               
+               enquanto (reposicao < 1) faca
+                   escreval()
+                   escreval("Quantidade tem ser maior que 0.")
+                   escreva("Digite a quantidade para reposição: ")
+                   leia(reposicao)
+               fimenquanto
+
+               
+               ate
+
+               
+           fimenquanto
+           
+           totalEstoque <- totalEstoque + reposicao
+
+            escreval()
+            escreval("Estoque atualizado:", totalEstoque, " unidades.")
+       fimse
 fimprocedimento
 
 procedimento vendaRealizada()
